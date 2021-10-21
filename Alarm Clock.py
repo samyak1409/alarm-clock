@@ -12,30 +12,30 @@ time_str = ''
 
 def update_cur_time():
     frame.configure(text=f'Current Time {str(datetime.now().time())[:8]}')
-    window.after(ms=1000, func=update_cur_time)
+    window.after(ms=100, func=update_cur_time)
 
 
 frame = LabelFrame(window, padx=64, pady=64)
 update_cur_time()
-frame.pack(expand=True)
+frame.pack(expand=True, pady=16)
 
 
 Label(frame, text='Set an Alarm: ').pack(side=TOP)
 
 h = IntVar()
-h.set(' H ')
+h.set(' H')
 om1 = OptionMenu(frame, h, *range(24))
 om1.pack(side=LEFT)
 om1.configure()
 
 m = IntVar()
-m.set(' M ')
+m.set(' M')
 om2 = OptionMenu(frame, m, *range(60))
 om2.pack(side=LEFT)
 om2.configure()
 
 s = IntVar()
-s.set(' S ')
+s.set(' S')
 om3 = OptionMenu(frame, s, *range(60))
 om3.pack(side=LEFT)
 om3.configure()
@@ -68,7 +68,7 @@ def check_alarm():
         if not stop:
             MessageBeep()
             sleep(1)
-            window.after(ms=1000, func=ring)
+            window.after(ms=100, func=ring)
 
     if time_str == str(datetime.now().time())[:8]:
         ring()
@@ -76,7 +76,7 @@ def check_alarm():
         showinfo('Knock-Knock', 'Stop Alarm?')
         stop = True
     else:
-        window.after(ms=1000, func=check_alarm)
+        window.after(ms=100, func=check_alarm)
 
 
 set_butt = Button(frame, text='Set', command=get_input)

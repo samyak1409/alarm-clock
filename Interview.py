@@ -24,7 +24,7 @@ def check(a):
         return True
     return True if a[-1] > a[-2] else False"""
 
-    # AFTER INTERVIEW - TRY 1: Passed ✅ :) (THIS HURTS A LOT WHEN YOU FAILED TO DO A EASY QUESTION BECAUSE OF NERVOUSNESS)
+    # AFTER INTERVIEW - TRY 1: Passed ✅ :) HURTS A LOT WHEN YOU FAILED TO DO AN EASY QUESTION BECAUSE OF NERVOUSNESS
     a.sort()
     i, j = 0, len(a)-1
     k = 0

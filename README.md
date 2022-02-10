@@ -1,4 +1,6 @@
-# Basic Alarm Clock
+# Alarm Clock
+
+A basic Alarm Clock.
 
 
 ## Screenshots
